@@ -176,7 +176,12 @@
             <version>${modelmapper-version}</version>
         </dependency>
     </dependencies>
-
+    <distributionManagement>
+          <snapshotRepository>
+             <id>nexus</id>
+             <url>http://172.31.43.239:8081/nexus/content/repositories/snapshots</url>
+          </snapshotRepository>
+    </distributionManagement>
 
     <!-- Build -->
 
