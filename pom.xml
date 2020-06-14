@@ -176,12 +176,12 @@
             <version>${modelmapper-version}</version>
         </dependency>
     </dependencies>
-    <distributionManagement>
-          <snapshotRepository>
-             <id>nexus</id>
-             <url>http://18.189.7.103/:8081/artifactory/content/repositories/snapshots</url>
-          </snapshotRepository>
-    </distributionManagement>
+<distributionManagement>
+	<snapshotRepository>
+		<id>nexus</id>
+			<url>http://13.127.100.158:8081/nexus/content/repositories/snapshots</url>
+	</snapshotRepository>
+</distributionManagement>
 
     <!-- Build -->
 
