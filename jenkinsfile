@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages{
+        stage('Git SCM'){
+            steps{
+                git 'https://github.com/sramprakashs/mvn_sonar.git'
+            }
+        }
+        stage('Build Analysis'){
+            steps{
+                sh '/opt/maven/bin/mvn clean verify'
+            }
+        }
+        stage('Build'){
+            steps{
+                sh '/opt/maven/bin/mvn clean install'
+            }
+        }
+        stage('Deploy'){
+            steps{
+                sh '/opt/maven/bin/mvn clean deploy'
+            }
+        }
+    }
+}
